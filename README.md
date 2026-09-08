@@ -4,10 +4,10 @@ Generate branded PDFs from Markdown or DOCX using the supplied Paper report temp
 
 ## Setup
 
-Requires Node.js 22 or newer. The repository is private; collaborators need GitHub access.
+Requires Node.js 22 or newer. The repository is public; agents can clone and set it up without GitHub authentication.
 
 ```sh
-gh repo clone jkou-cmd/use-rovn-design-system
+git clone https://github.com/jkou-cmd/use-rovn-design-system.git
 cd use-rovn-design-system
 ```
 
