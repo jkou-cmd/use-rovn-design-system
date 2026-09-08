@@ -76,3 +76,14 @@ test('Markdown dark-page preference survives preparation', async () => {
     const d=await loadInput(file);assert.equal(d.options.darkPages,false);assert.equal(validateDocument(d).options.darkPages,false);
   } finally { await fs.rm(dir,{recursive:true,force:true}); }
 });
+test('reviewed custom amber images remain portable through repeated preparation', async () => {
+  const d=validateDocument(document([{type:'image-band',src:'assets/bg1.png',amberSrc:{src:'assets/bg2.png',mood:'amber'}}]));
+  d.metadata.coverImage={src:'assets/bg1.png',mood:'amber',sourceUrl:'https://example.com/photo'};
+  d.sections[0].headerImage={src:'assets/bg2.png',mood:'amber'};
+  await localizeDocument(d,'report.md');
+  assert.match(d.metadata.coverImage.src,/^data:image\/png;base64,/);
+  assert.equal(d.metadata.coverImage.sourceUrl,'https://example.com/photo');
+  const before=structuredClone(d);await localizeDocument(d,'another/location/report.json');assert.deepEqual(d,before);
+  d.metadata.coverImage={src:'assets/bg1.png',mood:'blue'};
+  await assert.rejects(()=>localizeDocument(d,'report.md'),/Custom cover\/header imagery/);
+});

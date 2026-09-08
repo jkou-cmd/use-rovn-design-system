@@ -17,19 +17,23 @@ export async function localizeDocument(doc, inputPath) {
     return dataUrl(filename);
   }
   const amber = new Set(['assets/bg1.png', 'assets/bg2.png', 'assets/bg3.png', 'assets/bg4.png']);
-  function amberImage(src) {
+  async function amberImage(src) {
+    if (src && typeof src === 'object' && src.mood === 'amber' && typeof src.src === 'string') {
+      return { ...src, src: await image(src.src) };
+    }
+    if (typeof src !== 'string') throw new Error('Custom cover/header imagery needs { src, mood: "amber" } after visual review.');
     if (!amber.has(src.replace(/^\//, ''))) throw new Error('Cover and header images must be from the approved amber set: assets/bg1.png through bg4.png.');
     return '/' + src.replace(/^\//, '');
   }
-  if (doc.metadata.coverImage) doc.metadata.coverImage = amberImage(doc.metadata.coverImage);
+  if (doc.metadata.coverImage) doc.metadata.coverImage = await amberImage(doc.metadata.coverImage);
   async function block(b) {
     if (b.src) b.src = await image(b.src);
-    if (b.amberSrc) b.amberSrc = amberImage(b.amberSrc);
+    if (b.amberSrc) b.amberSrc = await amberImage(b.amberSrc);
     if (b.images) for (const i of b.images) i.src = await image(i.src);
     if (b.blocks) for (const child of b.blocks) await block(child);
   }
   for (const s of doc.sections) {
-    if (s.headerImage) s.headerImage = amberImage(s.headerImage);
+    if (s.headerImage) s.headerImage = await amberImage(s.headerImage);
     for (const b of s.blocks) await block(b);
   }
   for (const b of doc.appendix) await block(b);

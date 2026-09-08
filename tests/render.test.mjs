@@ -60,7 +60,7 @@ test('overflow preserves prose, table cells, rich cards and literal code; long T
 
 test('dark toggle preserves pagination and Lucide artwork inherits both template palettes',async()=>{
   await fs.mkdir('tmp/tests',{recursive:true});
-  const d={schemaVersion:1,metadata:{title:'Icon verification',author:'Test'},options:{darkPages:false},sections:Array.from({length:8},(_,i)=>({title:'Section '+(i+1),blocks:[
+  const d={schemaVersion:1,metadata:{title:'Icon verification',author:'Test',coverImage:{src:'assets/bg1.png',mood:'amber'}},options:{darkPages:false},sections:Array.from({length:8},(_,i)=>({title:'Section '+(i+1),blocks:[
     {type:'callout',variant:3,icon:'shield-check',title:'Privacy',text:'Protect the supplied documents.'},
     {type:'callout',variant:4,icon:'calendar-clock',title:'Renewal',text:'Check the expiry date.'},
     {type:'callout',variant:6,icon:'graduation-cap',title:'Learning',text:'Keep the certificate.'},

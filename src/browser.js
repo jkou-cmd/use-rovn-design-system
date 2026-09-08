@@ -29,6 +29,7 @@ function bodyRow(dark, html, key, note) {
   flow(find(row, '2.1.1.1.0'), html, key); return row;
 }
 function localImage(image, src, contain = false) {
+  if (src && typeof src === 'object') src = src.src;
   image.style.backgroundImage = `url("${src}")`; image.style.backgroundSize = contain ? 'contain' : 'cover'; image.style.backgroundRepeat = 'no-repeat';
   image.dataset.image = src; image.setAttribute('role', 'img');
 }

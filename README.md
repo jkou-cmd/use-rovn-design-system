@@ -52,6 +52,10 @@ npm run render -- document.md --dark-pages on
 
 Or put `darkPages: false` in the Markdown's YAML frontmatter. Prepared JSON uses `"options": { "darkPages": false }`. The CLI overrides the document setting. Dark pages are on by default; turning them off keeps every body page light and preserves pagination.
 
+## Web imagery
+
+Agents may find and download additional imagery from the web when it matches the Rōvn mood: warm, atmospheric, natural/botanical imagery with soft light. Cover and section headers stay amber; ToC and appendix artwork stays fixed. Chosen images are downloaded and embedded, with source and attribution details retained beside the prepared document. See [custom imagery fields](docs/document-model.md) for the renderer format.
+
 ## Direct CLI
 
 ```sh

@@ -67,7 +67,15 @@ Cards variants: `numbered`, `icons`, `ruled-numbered`, `ruled-icons`. Two or thr
 
 Table cells and headings contain inline HTML. `widths` is an array of positive relative column weights. Three-column tables default to the source template's proportions; other column counts use equal shares. Wide or semantically complex tables may need editorial restructuring into multiple tables. No data may be discarded.
 
-Image paths can be relative to the input file or begin with `assets/` for bundled images. Approved cover/header imagery is `assets/bg1.png`–`assets/bg4.png`. Input charts/screenshots use contain by default; decorative images use cover. Remote images must be downloaded explicitly before rendering. Preparation embeds input images in the JSON; the output HTML embeds all fonts and images.
+Image paths can be relative to the input file or begin with `assets/` for bundled images. Cover/header imagery defaults to `assets/bg1.png`–`assets/bg4.png`. Agents may also search the web for imagery matching the warm, atmospheric, botanical/natural mood. Cover and section-header images must be visually reviewed as amber; body imagery may use complementary brand tones. ToC and appendix artwork remains fixed.
+
+For a reviewed custom cover, section header, or image-band amber panel, use an object instead of a bundled path:
+
+```json
+{"src":"images/amber-landscape.jpg","mood":"amber","sourceUrl":"https://example.com/original-image-page"}
+```
+
+This object is accepted in `metadata.coverImage`, `section.headerImage`, and `block.amberSrc`. `mood: "amber"` records the agent's visual review; it is not automated color classification. The renderer embeds the local image and preserves the object so prepared JSON remains portable across subsequent renders. Existing bundled paths remain supported. Unreviewed custom strings are rejected. Input charts/screenshots use contain by default; decorative images use cover. Web images must be downloaded locally before rendering. Retain source/creator/license details in an imagery record beside the prepared document and include any required attribution. Preparation embeds input images in the JSON; the output HTML embeds all fonts and images.
 
 ## Dark pages
 

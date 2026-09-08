@@ -38,7 +38,7 @@ Captured from the user's 17 selected frames on the Doc Brand Kit page. Files in 
 - The AI may select suitable component variants and turn source content into cards, comparisons, callouts, and other designed layouts.
 - Correct inconsistent sample section letters and prevent orphaned headings while preserving visual styling.
 - Include cover subtitle, eyebrow, and summary only when supplied in the input; do not invent these fields.
-- The AI may choose decorative images from the bundled repository assets, including when the input has no images.
+- The AI may choose decorative images from the bundled assets or find additional web imagery matching the existing mood, including when the input has no images. Web images are reviewed, downloaded and embedded locally, with provenance retained.
 - Cover imagery may vary. Both cover images and section-header images must use amber-colored imagery.
 - Preserve the exact ToC and appendix artwork and composition across generated documents.
 - Every main section begins on a new page with an amber image header.
