@@ -1,0 +1,87 @@
+[
+  {
+    "frame": "OC9-0",
+    "meanAbsoluteChannelDifference": 0.6318,
+    "pixelsOver20Percent": 0.0323
+  },
+  {
+    "frame": "OR2-0",
+    "meanAbsoluteChannelDifference": 0.2795,
+    "pixelsOver20Percent": 0.1252
+  },
+  {
+    "frame": "P5W-0",
+    "meanAbsoluteChannelDifference": 0.4219,
+    "pixelsOver20Percent": 0.0297
+  },
+  {
+    "frame": "PVO-0",
+    "meanAbsoluteChannelDifference": 0.4952,
+    "pixelsOver20Percent": 0.0328
+  },
+  {
+    "frame": "QDS-0",
+    "meanAbsoluteChannelDifference": 0.6216,
+    "pixelsOver20Percent": 0.2747
+  },
+  {
+    "frame": "QRC-0",
+    "meanAbsoluteChannelDifference": 0.5266,
+    "pixelsOver20Percent": 0.0274
+  },
+  {
+    "frame": "RO3-0",
+    "meanAbsoluteChannelDifference": 0.4654,
+    "pixelsOver20Percent": 0.0347
+  },
+  {
+    "frame": "S28-0",
+    "meanAbsoluteChannelDifference": 0.5029,
+    "pixelsOver20Percent": 0.1395
+  },
+  {
+    "frame": "SEW-0",
+    "meanAbsoluteChannelDifference": 0.4764,
+    "pixelsOver20Percent": 0.0306
+  },
+  {
+    "frame": "SHE-0",
+    "meanAbsoluteChannelDifference": 0.4214,
+    "pixelsOver20Percent": 0.3567
+  },
+  {
+    "frame": "TTI-0",
+    "meanAbsoluteChannelDifference": 0.207,
+    "pixelsOver20Percent": 0.0381
+  },
+  {
+    "frame": "TW7-0",
+    "meanAbsoluteChannelDifference": 0.3118,
+    "pixelsOver20Percent": 0.0361
+  },
+  {
+    "frame": "TZ3-0",
+    "meanAbsoluteChannelDifference": 0.3985,
+    "pixelsOver20Percent": 0.0309
+  },
+  {
+    "frame": "U0I-0",
+    "meanAbsoluteChannelDifference": 0.4062,
+    "pixelsOver20Percent": 0.3115
+  },
+  {
+    "frame": "U4R-0",
+    "meanAbsoluteChannelDifference": 0.178,
+    "pixelsOver20Percent": 0.155
+  },
+  {
+    "frame": "U9A-0",
+    "meanAbsoluteChannelDifference": 0.2262,
+    "pixelsOver20Percent": 0.0352
+  },
+  {
+    "frame": "UBS-0",
+    "meanAbsoluteChannelDifference": 0.2895,
+    "pixelsOver20Percent": 0.0419
+  }
+]

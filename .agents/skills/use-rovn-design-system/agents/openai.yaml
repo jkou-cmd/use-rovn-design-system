@@ -1,0 +1,4 @@
+interface:
+  display_name: "Use Rōvn Design System"
+  short_description: "Generate PDFs with the exact Rōvn report templates"
+  default_prompt: "Use $use-rovn-design-system to turn this document into a Rōvn-branded PDF."

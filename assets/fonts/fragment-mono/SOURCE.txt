@@ -1,0 +1,3 @@
+https://github.com/weiweihuanghuang/fragment-mono
+Commit: 498da27ba83f1e21a5d0c4973ef651a44874dfb1
+Unmodified upstream WOFF2 fonts; license included.
